@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Libro - Biblio Matanza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">Biblio Matanza</a>
+        <nav class="auth-links">
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="register.html">Registrarse</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="reserve-page">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; <a href="book-details.html">El Principito</a> &gt; <strong>Reservar Libro</strong>
+            </div>
+            
+            <div class="reserve-header">
+                <h1>Proceso de Reserva</h1>
+            </div>
+
+            <div class="stepper">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Selección</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Confirmación</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Completado</div>
+                </div>
+            </div>
+
+            <div class="reserve-content">
+                <div class="review-box">
+                    <h2>Confirmar Reserva</h2>
+                    <p>Por favor revisa la información y acepta los términos para completar tu reserva.</p>
+                    
+                    <div class="review-item">
+                        <strong>Libro:</strong>
+                        <span>El Principito</span>
+                    </div>
+                    <div class="review-item">
+                        <strong>Autor:</strong>
+                        <span>Antoine de Saint-Exupéry</span>
+                    </div>
+                    <div class="review-item">
+                        <strong>Biblioteca:</strong>
+                        <span>Biblioteca Popular La Esperanza</span>
+                    </div>
+                    <div class="review-item">
+                        <strong>Dirección:</strong>
+                        <span>Av. San Martín 1234, González Catán</span>
+                    </div>
+                    <div class="review-item">
+                        <strong>Validez de reserva:</strong>
+                        <span>3 días hábiles</span>
+                    </div>
+                </div>
+                <div class="terms-box">
+                    <h2>Términos y Condiciones</h2>
+                    <div class="terms-scroll">
+                        <h4>Condiciones para Retiro</h4>
+                        <p>Para retirar el libro, debe presentarse personalmente en la biblioteca con:</p>
+                        <ul>
+                            <li>Documento Nacional de Identidad (DNI) original y vigente.</li>
+                            <li>Comprobante de reserva (puede ser digital o impreso).</li>
+                        </ul>
+                        
+                        <h4>Plazo de Devolución</h4>
+                        <p>El plazo máximo de préstamo es de 15 días naturales. Las devoluciones podrán realizarse en el horario de atención de la biblioteca.</p>
+                        
+                        <h4>Renovaciones</h4>
+                        <p>Es posible renovar el préstamo por un período adicional de 15 días, siempre que:</p>
+                        <ul>
+                            <li>El libro no tenga reservas de otros usuarios.</li>
+                            <li>La solicitud se haga antes de la fecha de vencimiento.</li>
+                        </ul>
+                    </div>
+                    <div class="acceptance-box">
+                        <input type="checkbox" id="terms-accept">
+                        <label for="terms-accept">He leído y acepto los términos y condiciones. Comprendo que debo presentar mi DNI para retirar el libro y que la reserva tiene una validez de 3 días hábiles.</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reserve-actions">
+                <a href="book-details.html" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Volver atrás</a>
+                <a href="#" class="btn btn-primary">Confirmar Reserva <i class="fa fa-check"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+        <a href="#"><i class="fa fa-comments"></i> Preguntas Frecuentes</a>
+        <a href="#"><i class="fa fa-book-open"></i> Guías</a>
+        <a href="#"><i class="fa fa-envelope"></i> Contacto</a>
+    </footer>
+</body>
+</html>

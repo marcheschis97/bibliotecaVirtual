@@ -1,0 +1,527 @@
+/* --- Variables de Color y Estilos Globales --- */
+:root {
+    --color-principal: #3a7f4a; /* Verde */
+    --color-fondo: #e0d8d1;     /* Beige claro */
+    --color-texto: #333;
+    --color-oscuro: #4a3b35;    /* Marrón oscuro footer/header */
+    --color-claro: #f8f5f2;     /* Fondo de tarjetas */
+    --color-blanco: #ffffff;
+    --color-gris: #ccc;
+    --color-gris-texto: #777;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+.btn-primary:hover {
+    background-color: #2e663b;
+}
+.btn-secondary {
+    background-color: var(--color-claro);
+    color: var(--color-texto);
+    border: 1px solid var(--color-gris);
+}
+.btn-secondary:hover {
+    background-color: #e9e5e2;
+}
+
+/* --- Header y Footer General --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--color-fondo);
+}
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-oscuro);
+}
+.main-header .auth-links a {
+    margin-left: 15px;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.main-footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin-top: 40px;
+}
+.main-footer a {
+    color: var(--color-claro);
+    font-weight: 500;
+}
+
+/* --- index.html (Página Principal) --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 0;
+}
+.hero-section h1 {
+    font-size: 28px;
+    color: var(--color-oscuro);
+    margin-bottom: 20px;
+}
+.search-bar {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+.search-bar input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--color-gris);
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+.search-bar button {
+    padding: 0 25px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--color-principal);
+    color: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+.location-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.browse-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.browse-card {
+    background-color: var(--color-claro);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.browse-card h2 {
+    font-size: 18px;
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tag {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-gris);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+.tag:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- book-details.html --- */
+.book-details-page {
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.book-main-info {
+    display: flex;
+    gap: 30px;
+}
+.book-cover-placeholder {
+    width: 150px;
+    height: 220px;
+    background-color: var(--color-claro);
+    border: 1px solid var(--color-gris);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: var(--color-gris);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.book-info h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.book-info .author {
+    font-size: 18px;
+    color: var(--color-gris-texto);
+    margin-bottom: 15px;
+}
+.book-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--color-gris-texto);
+    margin-bottom: 20px;
+}
+.book-description {
+    line-height: 1.6;
+}
+
+.availability-card {
+    background-color: var(--color-claro);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+.availability-card h3 {
+    width: 100%;
+    margin-top: 0;
+    font-size: 20px;
+}
+.info-col {
+    font-size: 15px;
+}
+.info-col p {
+    margin: 5px 0;
+}
+.info-col strong {
+    color: var(--color-texto);
+}
+.status-available {
+    color: var(--color-principal);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.book-actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.related-books {
+    margin-top: 40px;
+}
+.related-books h2 {
+    font-size: 22px;
+    border-bottom: 1px solid var(--color-gris);
+    padding-bottom: 10px;
+}
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+.book-card {
+    background-color: var(--color-claro);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+.book-card .icon {
+    font-size: 40px;
+    color: var(--color-gris);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.book-card h4 {
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+}
+.book-card .author {
+    font-size: 13px;
+    color: var(--color-gris-texto);
+    margin-bottom: 10px;
+}
+
+/* --- reserve.html --- */
+.reserve-page {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 8px;
+}
+.breadcrumb {
+    font-size: 14px;
+    color: var(--color-gris-texto);
+    margin-bottom: 10px;
+}
+.breadcrumb a {
+    color: var(--color-principal);
+}
+.reserve-header h1 {
+    margin-top: 0;
+}
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+.step {
+    text-align: center;
+    z-index: 1;
+}
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-gris);
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 5px auto;
+}
+.step-label {
+    font-size: 14px;
+    color: var(--color-gris-texto);
+}
+.step.active .step-number {
+    background-color: var(--color-principal);
+}
+.step.active .step-label {
+    color: var(--color-texto);
+    font-weight: bold;
+}
+.stepper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--color-gris);
+    z-index: 0;
+}
+
+.reserve-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+.review-box, .terms-box {
+    padding: 20px;
+    background-color: var(--color-claro);
+    border-radius: 8px;
+}
+.review-box h2, .terms-box h2 {
+    margin-top: 0;
+}
+.review-item {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.review-item strong {
+    display: block;
+    color: var(--color-gris-texto);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.terms-scroll {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid var(--color-gris);
+    background-color: var(--color-blanco);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.terms-scroll h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.terms-scroll ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.acceptance-box {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.acceptance-box input {
+    margin-top: 5px;
+}
+.acceptance-box label {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-gris-texto);
+}
+.reserve-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --- login.html & register.html --- */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--color-claro);
+}
+.login-container {
+    width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.login-header {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    padding: 30px;
+    text-align: center;
+}
+.login-header h2 {
+    margin: 0 0 5px 0;
+}
+.login-header p {
+    margin: 0;
+    opacity: 0.8;
+}
+.login-body {
+    background-color: var(--color-blanco);
+    padding: 30px;
+}
+.auth-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--color-gris);
+    margin-bottom: 25px;
+}
+.auth-tabs a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    color: var(--color-gris-texto);
+    border-bottom: 3px solid transparent;
+}
+.auth-tabs a.active {
+    color: var(--color-principal);
+    border-bottom-color: var(--color-principal);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-gris);
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante */
+}
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.form-options label {
+    font-weight: normal;
+}
+.btn-full {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.auth-switch {
+    text-align: center;
+    font-size: 15px;
+}
+/* Estilos para el formulario de registro (blanco) */
+.register-container {
+    width: 450px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+}
+.register-container h2 {
+    text-align: center;
+    margin-top: 0;
+}
+.register-container .form-group p {
+    font-size: 12px;
+    color: var(--color-gris-texto);
+    margin: 5px 0 0 0;
+}
+.register-container .auth-switch {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
