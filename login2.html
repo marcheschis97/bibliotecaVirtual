@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Biblio Matanza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">Biblio Matanza</a>
+    </header>
+
+    <div class="auth-page">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Bienvenido a BiblioMatanza</h2>
+                <p>Accede a miles de libros en bibliotecas populares</p>
+            </div>
+            <div class="login-body">
+                <nav class="auth-tabs">
+                    <a href="#" class="tab-link active" data-tab="lector">Soy Lector</a>
+                    <a href="#" class="tab-link" data-tab="biblioteca">Soy Biblioteca</a>
+                </nav>
+
+                <!-- Login LECTOR -->
+                <form action="index.html" id="login-lector" class="tab-content active">
+                    <div class="form-group">
+                        <label for="dni_email_lector">DNI o Correo Electrónico</label>
+                        <input type="text" id="dni_email_lector" placeholder="Ingresa tu DNI o correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_lector_login">Contraseña</label>
+                        <input type="password" id="password_lector_login" placeholder="Ingresa tu contraseña">
+                    </div>
+                    <div class="form-options">
+                        <label><input type="checkbox" name="remember_lector"> Recordarme</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión como Lector</button>
+                </form>
+
+                <!-- Login BIBLIOTECA -->
+                <form action="admin-dashboard.html" id="login-biblioteca" class="tab-content">
+                    <div class="form-group">
+                        <label for="email_biblioteca_login">Correo Electrónico</label>
+                        <input type="email" id="email_biblioteca_login" placeholder="Correo de la biblioteca">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_biblioteca_login">Contraseña</label>
+                        <input type="password" id="password_biblioteca_login" placeholder="Contraseña de la biblioteca">
+                    </div>
+                    <div class="form-options">
+                        <label><input type="checkbox" name="remember_biblioteca"> Recordarme</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión como Biblioteca</button>
+                </form>
+
+                <div class="auth-switch">
+                    <a href="register2.html">+ Crear una cuenta nueva</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mismo script para cambiar pestañas
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remover clase active de todos
+                    tabLinks.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(t => t.classList.remove('active'));
+
+                    // Agregar clase active al tab clickeado
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`login-${tabId}`).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio Matanza - Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">Biblio Matanza</div>
+            <nav class="auth-links">
+                <a href="perfil-lector.html"><i class="fa fa-user"></i> Mi Perfil</a>
+                <a href="login2.html"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+            </nav>
+    </header>
+
+    <main class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Resultados de búsqueda
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <section class="search-section">
+            <form class="search-bar" action="search-results.html">
+                <input type="text" placeholder="Buscar por título, autor o categoría..." value="El Principito">
+                <button type="submit"><i class="fa fa-search"></i> Buscar</button>
+            </form>
+            
+            <div class="search-info">
+                <p>Se encontraron <strong>3 bibliotecas</strong> con el libro "<strong>El Principito</strong>"</p>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section class="results-section">
+            <h1>Bibliotecas con este libro disponible</h1>
+            
+            <div class="libraries-list">
+                <!-- Biblioteca 1 -->
+                <div class="library-card">
+                    <div class="library-info">
+                        <h2><i class="fa fa-landmark"></i> Biblioteca Popular La Esperanza</h2>
+                        <div class="library-meta">
+                            <span><i class="fa fa-map-marker-alt"></i> Av. San Martín 1234</span>
+                            <span><i class="fa fa-clock"></i> Lun-Vie: 9:00-18:00</span>
+                            <span><i class="fa fa-phone"></i> 11-2345-6789</span>
+                        </div>
+                        
+                        <div class="book-availability">
+                            <div class="availability-status status-available">
+                                <i class="fa fa-check-circle"></i> Disponible para reserva
+                            </div>
+                            <div class="availability-details">
+                                <p><strong>Ejemplares disponibles:</strong> 2</p>
+                                <p><strong>Tiempo de préstamo:</strong> 15 días</p>
+                                <p><strong>Renovaciones permitidas:</strong> 1 vez</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-actions">
+                        <a href="reserve.html" class="btn btn-primary">
+                            <i class="fa fa-bookmark"></i> Reservar Libro
+                        </a>
+                        <button class="btn btn-secondary">
+                            <i class="fa fa-map"></i> Ver en Mapa
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Biblioteca 2 -->
+                <div class="library-card">
+                    <div class="library-info">
+                        <h2><i class="fa fa-landmark"></i> Biblioteca Popular El Saber</h2>
+                        <div class="library-meta">
+                            <span><i class="fa fa-map-marker-alt"></i> Calle 45 N° 567</span>
+                            <span><i class="fa fa-clock"></i> Lun-Sab: 8:00-20:00</span>
+                            <span><i class="fa fa-phone"></i> 11-9876-5432</span>
+                        </div>
+                        
+                        <div class="book-availability">
+                            <div class="availability-status status-available">
+                                <i class="fa fa-check-circle"></i> Disponible para reserva
+                            </div>
+                            <div class="availability-details">
+                                <p><strong>Ejemplares disponibles:</strong> 1</p>
+                                <p><strong>Tiempo de préstamo:</strong> 21 días</p>
+                                <p><strong>Renovaciones permitidas:</strong> 2 veces</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-actions">
+                        <a href="reserve.html" class="btn btn-primary">
+                            <i class="fa fa-bookmark"></i> Reservar Libro
+                        </a>
+                        <button class="btn btn-secondary">
+                            <i class="fa fa-map"></i> Ver en Mapa
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Biblioteca 3 -->
+                <div class="library-card">
+                    <div class="library-info">
+                        <h2><i class="fa fa-landmark"></i> Biblioteca Popular Rafael Alberti</h2>
+                        <div class="library-meta">
+                            <span><i class="fa fa-map-marker-alt"></i> Ruta 3 Km 25</span>
+                            <span><i class="fa fa-clock"></i> Mar-Dom: 10:00-19:00</span>
+                            <span><i class="fa fa-phone"></i> 11-3456-7890</span>
+                        </div>
+                        
+                        <div class="book-availability">
+                            <div class="availability-status unavailable">
+                                <i class="fa fa-clock"></i> Próxima disponibilidad: 5 días
+                            </div>
+                            <div class="availability-details">
+                                <p><strong>Estado:</strong> Todos los ejemplares prestados</p>
+                                <p><strong>Próxima devolución:</strong> 15/12/2024</p>
+                                <p><strong>Puedes solicitar aviso:</strong> Cuando esté disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="library-actions">
+                        <button class="btn btn-secondary" disabled>
+                            <i class="fa fa-bell"></i> Solicitar Aviso
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fa fa-map"></i> Ver en Mapa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Libros relacionados -->
+        <section class="related-books">
+            <h2>Libros similares que podrían interesarte</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="icon">📚</div>
+                    <h4>El Pequeño Príncipe</h4>
+                    <div class="author">Antoine de Saint-Exupéry</div>
+                    <button class="btn btn-primary">Ver Disponibilidad</button>
+                </div>
+                <div class="book-card">
+                    <div class="icon">📚</div>
+                    <h4>Momo</h4>
+                    <div class="author">Michael Ende</div>
+                    <button class="btn btn-primary">Ver Disponibilidad</button>
+                </div>
+                <div class="book-card">
+                    <div class="icon">📚</div>
+                    <h4>El Libro de la Selva</h4>
+                    <div class="author">Rudyard Kipling</div>
+                    <button class="btn btn-primary">Ver Disponibilidad</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+        <a href="#"><i class="fa fa-comments"></i> Preguntas Frecuentes</a>
+        <a href="#"><i class="fa fa-book-open"></i> Guías</a>
+        <a href="#"><i class="fa fa-envelope"></i> Contacto</a>
+    </footer>
+</body>
+</html>

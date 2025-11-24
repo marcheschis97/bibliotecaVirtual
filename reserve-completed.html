@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Completada - Biblio Matanza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">Biblio Matanza</a>
+        <nav class="auth-links">
+            <a href="perfil-lector.html"><i class="fa fa-user"></i> Mi Perfil</a>
+            <a href="login2.html"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="reserve-page">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> &gt; <a href="book-details.html">El Principito</a> &gt; <strong>Reserva
+                    Completada</strong>
+            </div>
+
+            <div class="reserve-header">
+                <h1>¡Reserva Confirmada!</h1>
+            </div>
+
+            <div class="stepper">
+                <div class="step completed">
+                    <div class="step-number"><i class="fa fa-check"></i></div>
+                    <div class="step-label">Selección</div>
+                </div>
+                <div class="step completed">
+                    <div class="step-number"><i class="fa fa-check"></i></div>
+                    <div class="step-label">Confirmación</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Completado</div>
+                </div>
+            </div>
+
+            <!-- Paso 3 - reserva confirmada -->
+            <div class="completion-section">
+                <div class="success-message">
+                    <div class="success-icon">
+                        <i class="fa fa-check-circle"></i>
+                    </div>
+                    <h2>Tu reserva ha sido procesada exitosamente</h2>
+                    <p class="success-text">Hemos enviado un correo de confirmación a tu dirección de email.</p>
+                </div>
+
+                <div class="reservation-details">
+                    <div class="detail-card">
+                        <h3><i class="fa fa-info-circle"></i> Información de la Reserva</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <strong>Código de Reserva:</strong>
+                                <span class="reservation-code">RES-2024-78945</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Libro:</strong>
+                                <span>El Principito</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Autor:</strong>
+                                <span>Antoine de Saint-Exupéry</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Fecha de Reserva:</strong>
+                                <span>10 de Diciembre, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3><i class="fa fa-map-marker-alt"></i> Retiro en Biblioteca</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <strong>Biblioteca:</strong>
+                                <span>Biblioteca Popular La Esperanza</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Dirección:</strong>
+                                <span>Av. San Martín 1234, González Catán</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Fecha Límite de Retiro:</strong>
+                                <span class="highlight">Hasta el 13 de Diciembre, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Horario de Atención:</strong>
+                                <span>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 13:00</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Teléfono:</strong>
+                                <span>11-2345-6789</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card important-info">
+                        <h3><i class="fa fa-exclamation-circle"></i> Importante para el Retiro</h3>
+                        <ul class="important-list">
+                            <li>Presentar <strong>DNI original y vigente</strong></li>
+                            <li>Mostrar este <strong>comprobante de reserva</strong> (digital o impreso)</li>
+                            <li>La reserva tiene <strong>validez de 3 días hábiles</strong></li>
+                            <li>Si no retiras en el plazo, la reserva se cancelará automáticamente</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="window.print()">
+                        <i class="fa fa-print"></i> Imprimir Comprobante
+                    </button>
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fa fa-home"></i> Volver al Inicio
+                    </a>
+                </div>
+
+                <div class="support-info">
+                    <p><i class="fa fa-question-circle"></i> ¿Necesitas ayuda? <a href="#">Contáctanos</a> o llama al
+                        <strong>11-2345-6789</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <a href="#"><i class="fa fa-question-circle"></i> Ayuda</a>
+        <a href="#"><i class="fa fa-comments"></i> Preguntas Frecuentes</a>
+        <a href="#"><i class="fa fa-book-open"></i> Guías</a>
+        <a href="#"><i class="fa fa-envelope"></i> Contacto</a>
+    </footer>
+</body>
+
+</html>
