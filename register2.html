@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Biblio Matanza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">Biblio Matanza</a>
+    </header>
+
+    <div class="auth-page">
+        <div class="register-container">
+            <h2>Bienvenido a BiblioMatanza</h2>
+            <p style="text-align: center; margin-top: -10px; margin-bottom: 20px; color: var(--color-gris-texto);">
+                Accede a
+                miles de libros en bibliotecas populares</p>
+
+            <nav class="auth-tabs">
+                <a href="#" class="tab-link active" data-tab="lector">Soy Lector</a>
+                <a href="#" class="tab-link" data-tab="biblioteca">Soy Biblioteca</a>
+            </nav>
+
+            <!-- Formulario LECTOR -->
+            <form action="#" id="form-lector" class="tab-content active">
+                <div class="form-group">
+                    <label for="full_name">Nombre Completo</label>
+                    <input type="text" id="full_name" placeholder="Ingresa tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="dni">Número de DNI</label>
+                    <input type="text" id="dni" placeholder="Ingresa tu DNI sin puntos">
+                    <p>Ej: 40123456</p>
+                </div>
+                <div class="form-group">
+                    <label for="email_lector">Correo Electrónico</label>
+                    <input type="email" id="email_lector" placeholder="Ingresa tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="phone_lector">Teléfono</label>
+                    <input type="number" id="phone_lector" placeholder="Ingresa tu número de teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="address_lector">Dirección</label>
+                    <input type="text" id="address_lector" placeholder="Ingresa tu dirección">
+                </div>
+                <div class="form-group">
+                    <label for="password_lector">Contraseña</label>
+                    <input type="password" id="password_lector" placeholder="Crea una contraseña segura">
+                    <p>Mínimo 8 caracteres, incluyendo mayúsculas y números.</p>
+                </div>
+                <div class="form-group">
+                    <label for="password_confirm_lector">Confirmar Contraseña</label>
+                    <input type="password" id="password_confirm_lector" placeholder="Repite tu contraseña">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Crear Cuenta de Lector</button>
+            </form>
+
+            <!-- Formulario BIBLIOTECA -->
+            <form action="#" id="form-biblioteca" class="tab-content">
+                <div class="form-group">
+                    <label for="library_name">Nombre de la Biblioteca</label>
+                    <input type="text" id="library_name" placeholder="Ej: Biblioteca Popular La Esperanza">
+                </div>
+                <div class="form-group">
+                    <label for="responsible_name">Nombre del Responsable</label>
+                    <input type="text" id="responsible_name" placeholder="Nombre de la persona a cargo">
+                </div>
+                <div class="form-group">
+                    <label for="email_biblioteca">Correo Electrónico</label>
+                    <input type="email" id="email_biblioteca" placeholder="Correo de la biblioteca">
+                </div>
+                <div class="form-group">
+                    <label for="phone_biblioteca">Teléfono de Contacto</label>
+                    <input type="number" id="phone_biblioteca" placeholder="Teléfono de la biblioteca">
+                </div>
+                <div class="form-group">
+                    <label for="address_biblioteca">Dirección de la Biblioteca</label>
+                    <input type="text" id="address_biblioteca" placeholder="Dirección completa">
+                </div>
+                <div class="form-group">
+                    <label for="schedule">Horarios de Atención</label>
+                    <input type="text" id="schedule" placeholder="Ej: Lun-Vie 9:00-18:00, Sáb 9:00-13:00">
+                </div>
+                <div class="form-group">
+                    <label for="password_biblioteca">Contraseña</label>
+                    <input type="password" id="password_biblioteca" placeholder="Crea una contraseña segura">
+                    <p>Mínimo 8 caracteres, incluyendo mayúsculas y números.</p>
+                </div>
+                <div class="form-group">
+                    <label for="password_confirm_biblioteca">Confirmar Contraseña</label>
+                    <input type="password" id="password_confirm_biblioteca" placeholder="Repite tu contraseña">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Registrar Biblioteca</button>
+            </form>
+
+            <div class="auth-switch">
+                <a href="login2.html">Ya tengo una cuenta</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript simple para cambiar pestañas
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remover clase active de todos
+                    tabLinks.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(t => t.classList.remove('active'));
+
+                    // Agregar clase active al tab clickeado
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`form-${tabId}`).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

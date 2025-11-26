@@ -19,46 +19,49 @@
     </header>
 
     <main class="container">
-        <section class="hero-section">
-            <h1>Accede a miles de títulos en bibliotecas populares de La Matanza</h1>
-            <form class="search-bar" action="#">
-                <input type="text" placeholder="Buscar por título, autor o categoría...">
-                <button type="submit"><i class="fa fa-search"></i> Buscar</button>
-            </form>
-            
-            <button class="location-button">
-                <i class="fa fa-paper-plane"></i> Usar mi ubicación para bibliotecas cercanas
-            </button>
-        </section>
+        <div class="cuerpo-index">
+            <section class="hero-section">
+                <h1>Accede a miles de títulos en bibliotecas populares de La Matanza</h1>
 
-        <section class="browse-sections">
-            <div class="browse-card">
-                <h2><i class="fa fa-tags"></i> Categorías</h2>
-                <div class="tags-container">
-                    <a href="#" class="tag">Literatura</a>
-                    <a href="#" class="tag">Ciencia</a>
-                    <a href="#" class="tag">Infantil</a>
-                </div>
-            </div>
-            
-            <div class="browse-card">
-                <h2><i class="fa fa-landmark"></i> Bibliotecas Populares</h2>
-                <div class="tags-container">
-                    <a href="#" class="tag">La Esperanza</a>
-                    <a href="#" class="tag">El Saber</a>
-                    <a href="#" class="tag">Rafael Alberti</a>
-                </div>
-            </div>
+                <form class="search-bar" action="search-results.html" method="GET">
+                    <input type="text" name="q" placeholder="Buscar por título, autor o categoría...">
+                    <button type="submit"><i class="fa fa-search"></i> Buscar</button>
+                </form>
 
-            <div class="browse-card">
-                <h2><i class="fa fa-star"></i> Libros Más Leídos</h2>
-                <div class="tags-container">
-                    <a href="book-details.html" class="tag">El Principito</a>
-                    <a href="#" class="tag">Cien Años</a>
-                    <a href="#" class="tag">El Alquimista</a>
+                <button class="location-button">
+                    <i class="fa fa-paper-plane"></i> Usar mi ubicación para bibliotecas cercanas
+                </button>
+            </section>
+
+            <section class="browse-sections">
+                <div class="browse-card">
+                    <h2><i class="fa fa-tags"></i> Categorías</h2>
+                    <div class="tags-container">
+                        <a href="#" class="tag">Literatura</a>
+                        <a href="#" class="tag">Ciencia</a>
+                        <a href="#" class="tag">Infantil</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="browse-card">
+                    <h2><i class="fa fa-landmark"></i> Bibliotecas Populares</h2>
+                    <div class="tags-container">
+                        <a href="#" class="tag">La Esperanza</a>
+                        <a href="#" class="tag">El Saber</a>
+                        <a href="#" class="tag">Rafael Alberti</a>
+                    </div>
+                </div>
+
+                <div class="browse-card">
+                    <h2><i class="fa fa-star"></i> Libros Más Leídos</h2>
+                    <div class="tags-container">
+                        <a href="book-details.html" class="tag">El Principito</a>
+                        <a href="#" class="tag">Cien Años</a>
+                        <a href="#" class="tag">El Alquimista</a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="main-footer">
