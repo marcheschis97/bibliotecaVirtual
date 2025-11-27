@@ -80,9 +80,10 @@ a {
 }
 
 .main-footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
-    width: 100%;
+    width: auto;
+    height: auto;
     background-color: var(--color-oscuro);
     color: var(--color-claro);
     display: flex;
@@ -92,6 +93,7 @@ a {
     padding: 30px;
     margin-top: 40px;
 }
+
 .main-footer a {
     color: var(--color-claro);
     font-weight: 500;
