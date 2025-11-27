@@ -352,3 +352,7 @@ table.admin-table {
     font-weight: bold;
     cursor: pointer;
 }
+
+.logo{
+    max-width: 125px;
+}
